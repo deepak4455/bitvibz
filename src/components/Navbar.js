@@ -1,13 +1,13 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import {
-  AiOutlineAlignLeft,
-  AiOutlineInstagram,
-  AiFillFacebook,
-  AiOutlineClose,
-} from "react-icons/ai"
-import { BsMoon } from "react-icons/bs"
-import { ImPinterest } from "react-icons/im"
+  BsMoonFill,
+  BsFacebook,
+  BsInstagram,
+  BsPinterest,
+  BsFilterLeft,
+  BsXLg,
+} from "react-icons/bs"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="container header-container">
           <div className="mobile-menu">
             <button aria-hidden="true" onClick={() => setShow(!show)}>
-              <AiOutlineAlignLeft />
+              <BsFilterLeft id="menu-bar" />
             </button>
           </div>
           <div className="branding">
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
           <div className="dark-mode">
             <button aria-label="enable dark mode">
-              <BsMoon />
+              <BsMoonFill id="moon" />
             </button>
           </div>
           <div className="social-links">
@@ -54,21 +54,21 @@ const Navbar = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <AiFillFacebook />
+              <BsFacebook id="facebook" />
             </a>
             <a
               href="https://www.instagram.com/"
               rel="noreferrer"
               target="_blank"
             >
-              <AiOutlineInstagram />
+              <BsInstagram id="instagram" />
             </a>
             <a
               href="https://www.pinterest.com/"
               rel="noreferrer"
               target="_blank"
             >
-              <ImPinterest />
+              <BsPinterest id="pinterest" />
             </a>
           </div>
         </div>
@@ -82,7 +82,7 @@ const Navbar = () => {
             </div>
 
             <button onClick={() => setShow(!show)}>
-              <AiOutlineClose />
+              <BsXLg id="close" />
             </button>
           </div>
           <div class="drawer-menu">
@@ -124,7 +124,7 @@ const Navbar = () => {
                 rel="noreferrer"
                 target="_blank"
               >
-                <AiFillFacebook />
+                <BsFacebook id="facebook" />
               </a>
               <a
                 onClick={() => setShow(!show)}
@@ -132,7 +132,7 @@ const Navbar = () => {
                 rel="noreferrer"
                 target="_blank"
               >
-                <AiOutlineInstagram />
+                <BsInstagram id="instagram" />
               </a>
               <a
                 onClick={() => setShow(!show)}
@@ -140,7 +140,7 @@ const Navbar = () => {
                 rel="noreferrer"
                 target="_blank"
               >
-                <ImPinterest />
+                <BsPinterest id="pinterest" />
               </a>
             </div>
           </div>

@@ -13,7 +13,7 @@ export const query = graphql`
           title
           image {
             childImageSharp {
-              gatsbyImageData(width: 608, quality: 30)
+              gatsbyImageData(breakpoints: [640, 768, 1024, 1280], quality: 30)
             }
           }
           category

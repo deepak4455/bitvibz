@@ -1,8 +1,12 @@
+// @import "./colors.scss";
 /* Variable */
-$primary: #d10068;
-$text-color: #292929;
-$text-color-light: #757575;
-$border-color: #e6e6e6;
+$background: #ffffff;
+$primary: #e6003a;
+$text-color: #404040;
+$text-color-light: #737373;
+$border-color: #d9d9d9;
+
+// Order
 $border-radius: 0.25em;
 * {
   box-sizing: border-box;
@@ -14,9 +18,11 @@ $border-radius: 0.25em;
   //font-size: 15px;
 }
 body {
+  background-color: $background;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
+
 h1,
 h2,
 h3,
@@ -33,15 +39,7 @@ a {
 img {
   border-radius: $border-radius;
 }
-button {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  background-color: transparent;
-  border: 0px;
-  outline: 0px;
-  font-size: 20px;
-}
+
 p {
   line-height: 2rem;
   margin-bottom: 1.5em;
