@@ -1,0 +1,50 @@
+/* Variable */
+$primary: #d10068;
+$text-color: #292929;
+$text-color-light: #757575;
+$border-color: #e6e6e6;
+$border-radius: 0.25em;
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease 0s;
+}
+
+* {
+  color: $text-color;
+  //font-size: 15px;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none !important;
+}
+img {
+  border-radius: $border-radius;
+}
+button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+  font-size: 20px;
+}
+p {
+  line-height: 2rem;
+  margin-bottom: 1.5em;
+  font-size: 1.1rem;
+}

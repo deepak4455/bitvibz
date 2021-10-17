@@ -1,0 +1,20 @@
+//@import "./bulma.sass";
+//@import "./sass/base/generic.sass";
+// @import "./sass/base/minireset.sass";
+// @import "./sass/elements/container.sass";
+// @import "./sass/elements/content.sass";
+// @import "./sass/helpers/spacing.sass";
+// @import "./sass/helpers/typography.sass";
+// @import "./sass/layout/section.sass";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./global.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./index.scss";
+// @import "./blog-post.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&family=Raleway:wght@700&display=swap");

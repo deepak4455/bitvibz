@@ -1,0 +1,238 @@
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+/* Blog layout */
+.blog-layout {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+/********
+    Article 
+    **************/
+
+.page-title {
+  color: $primary;
+}
+article p {
+  font-size: 0.875rem;
+}
+.post-img {
+  display: inline-block;
+  box-shadow: rgba(100, 100, 100, 0.5) 0px 2px 8px;
+}
+.categories {
+  a {
+    display: inline-block;
+    margin-right: 24px;
+    font-size: 0.875rem;
+    color: $primary;
+  }
+}
+
+/***********
+ Sidebar 
+ ***********/
+
+.sidebar {
+  max-width: 100%;
+  flex: 0 0 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: -30px;
+}
+.widget {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 24px;
+  margin-bottom: 40px;
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  .tags a {
+    //display: none;
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 0.875rem;
+    color: $primary;
+  }
+}
+.feature-post {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+.feature-post:last-child {
+  margin-bottom: 0;
+}
+.feature-post-image {
+  position: relative;
+  width: 100%;
+  max-width: 70px;
+  height: 70px;
+  overflow: hidden;
+  //margin-right: 20px;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.post-details {
+  padding-left: 20px;
+  flex-basis: 76.5%;
+  max-width: 76.5%;
+  flex-grow: 1;
+  h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .tags {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+}
+.tag-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 15px;
+
+  a {
+    padding: 5px auto;
+  }
+  .post-count {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+.tag-item:last-child {
+  margin-bottom: 0;
+}
+.tag-item::before {
+  content: "•";
+  margin-right: 16px;
+  font-size: 150%;
+  color: $primary;
+}
+
+/* larger screen size */
+@media screen and (min-width: 768px) {
+  .blog-layout {
+    flex-direction: row;
+    padding-right: 40px;
+    padding-left: calc(40px - 24px);
+  }
+  .articles {
+    flex: 0 0 calc(100% - 220px);
+    max-width: calc(100% - 220px);
+    margin-right: 30px;
+  }
+  .article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  article {
+    flex-basis: 50%;
+    max-width: 50%;
+    align-self: flex-start;
+  }
+  .sidebar {
+    flex: 0 0 220px;
+    max-width: 220px;
+    padding-left: 0;
+    padding-right: 0px;
+  }
+
+  /* Latest post */
+  .feature-post-image {
+    position: relative;
+    max-width: 40px;
+    width: 100%;
+    height: 40px;
+    // margin-right: 10px;
+  }
+  .post-details {
+    padding-left: 10px;
+  }
+  .post-details h2 {
+    font-size: 0.75rem;
+  }
+
+  .widget .tags {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .articles {
+    flex: 0 0 calc(100% - 280px);
+    max-width: calc(100% - 280px);
+    margin-right: 40px;
+  }
+  .sidebar {
+    flex: 0 0 280px;
+    max-width: 280px;
+    padding-left: 0;
+    padding-right: 0px;
+  }
+
+  .feature-post-image {
+    max-width: 70px;
+    width: 100%;
+    height: 70px;
+    // margin-right: 20px;
+  }
+  .post-details {
+    flex-grow: 1;
+    padding-left: 20px;
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    .tags {
+      display: block;
+      font-size: 0.75rem;
+      margin-top: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .articles {
+    flex: 0 0 calc(100% - 360px);
+    max-width: calc(100% - 360px);
+    margin-right: 60px;
+  }
+  .sidebar {
+    flex: 0 0 360px;
+    max-width: 360px;
+    padding-left: 0;
+    padding-right: 0px;
+  }
+}
+.main-content h1 {
+  font-size: 1.875rem;
+}
+
+.post-feature-image {
+  box-shadow: rgba(100, 100, 100, 0.5) 0px 2px 8px;
+}
+
+/****************
+  Read more button
+  **************/
+.more-articles {
+  text-align: center;
+}
+.more-articles a {
+  text-align: center;
+  background-color: #292929;
+  color: #ffffff;
+  padding: 1em 2em;
+}
