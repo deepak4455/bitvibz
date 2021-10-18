@@ -15,8 +15,8 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div class="container blog-layout pt-20 ">
-        <div class="articles px-6 pb-20">
+      <div class="container blog-layout pt-16 ">
+        <div class="articles px-6 pb-16">
           <div class="main-content">
             <div class="content post-content">
               <h1 className="text-3xl mb-3">{title}</h1>

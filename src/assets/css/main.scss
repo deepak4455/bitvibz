@@ -1,17 +1,10 @@
-//@import "./bulma.sass";
-//@import "./sass/base/generic.sass";
-// @import "./sass/base/minireset.sass";
-// @import "./sass/elements/container.sass";
-// @import "./sass/elements/content.sass";
-// @import "./sass/helpers/spacing.sass";
-// @import "./sass/helpers/typography.sass";
-// @import "./sass/layout/section.sass";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// @import "./fonts.scss";
 @import "./global.scss";
+@import "./header.scss";
+@import "./icons.scss";
 @import "./index.scss";
+@import "./footer.scss";
 // @import "./blog-post.scss";

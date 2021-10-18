@@ -9,7 +9,6 @@ import {
   BsXLg,
 } from "react-icons/bs"
 import { StaticImage } from "gatsby-plugin-image"
-import "../assets/css/header.scss"
 
 const Navbar = () => {
   const [show, setShow] = useState(false)

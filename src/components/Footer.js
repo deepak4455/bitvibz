@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
-import "../assets/css/footer.scss"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -26,8 +25,8 @@ const Footer = () => {
         <div class="footer-menu">
           <Link to="/">Home</Link>
           <Link to="/About">About us</Link>
-          <Link to="/Privacy">Privacy Policy</Link>
-          <Link to="Contact">Contact us</Link>
+          <Link to="/">Privacy Policy</Link>
+          <Link to="/Contact">Contact</Link>
         </div>
       </div>
     </footer>
