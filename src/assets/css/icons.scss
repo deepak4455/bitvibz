@@ -9,12 +9,22 @@
 #pinterest {
   font-size: 18px;
 }
-#menu-bar {
-  font-size: 24px;
-}
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
+  #menu-bar {
+    box-sizing: content-box;
+    font-size: 28px;
+    padding: 5px;
+  }
   #moon {
+    box-sizing: content-box;
+    font-size: 18px;
+    padding: 5px;
+  }
+  #facebook,
+  #instagram,
+  #pinterest {
+    box-sizing: content-box;
     font-size: 18px;
   }
 }

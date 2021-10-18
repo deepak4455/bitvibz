@@ -4,7 +4,7 @@ import Banner from "../Banner/"
 
 const Posts = ({ posts, title }) => {
   return (
-    <div class="container blog-layout pt-20 ">
+    <div class="container blog-layout pt-16 ">
       <div class="articles">
         <h3 className="page-title text-2xl mb-12 ml-4">{title}</h3>
         <div class="article-container">

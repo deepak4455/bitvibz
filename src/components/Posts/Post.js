@@ -6,7 +6,7 @@ const Post = ({ frontmatter, excerpt }) => {
   const { title, image, slug, category } = frontmatter
 
   return (
-    <article class="px-8 mb-16">
+    <article class="px-6 mb-14">
       <Link to={`/${slug}`}>
         <GatsbyImage
           image={getImage(image)}
