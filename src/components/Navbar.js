@@ -68,10 +68,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className={show ? "drawer drawer-is-active" : "drawer"}>
-        <div class="drawer-overlay" onClick={() => setShow(!show)}></div>
-        <div class="drawer-content">
-          <div class="drawer-head p-5">
-            <div class="drawer-logo">
+        <div className="drawer-overlay" onClick={() => setShow(!show)}></div>
+        <div className="drawer-content">
+          <div className="drawer-head p-5">
+            <div className="drawer-logo">
               <StaticImage src="../assets/images/logo.svg" alt="website logo" />
             </div>
 
@@ -79,7 +79,7 @@ const Navbar = () => {
               <BsXLg id="close" />
             </button>
           </div>
-          <div class="drawer-menu">
+          <div className="drawer-menu">
             <Link
               onClick={() => setShow(!show)}
               to="/"
@@ -102,9 +102,9 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-          <div class="drawer-social-links">
+          <div className="drawer-social-links">
             <h4>Follow us</h4>
-            <div class="social-icons">
+            <div className="social-icons">
               <a
                 onClick={() => setShow(!show)}
                 href="https://www.facebook.com/"

@@ -15,12 +15,12 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <div class="container blog-layout pt-16 ">
-        <div class="articles px-6 pb-16">
-          <div class="main-content">
-            <div class="content post-content">
+      <div className="container blog-layout pt-16 ">
+        <div className="articles px-6 pb-16">
+          <div className="main-content">
+            <div className="content post-content">
               <h1 className="text-3xl mb-3">{title}</h1>
-              <span class="date">{date}</span>
+              <span className="date">{date}</span>
 
               <GatsbyImage
                 image={getImage(image)}
@@ -28,7 +28,7 @@ const PostTemplate = ({ data }) => {
                 className="post-feature-image mt-12 mb-20"
               />
 
-              <div class="post-description">
+              <div className="post-description">
                 <MDXRenderer embeddedImages={embeddedImages}>
                   {body}
                 </MDXRenderer>

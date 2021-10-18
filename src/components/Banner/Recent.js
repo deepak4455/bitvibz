@@ -30,12 +30,12 @@ const Recent = () => {
   } = data
   return (
     <div className="widget">
-      <h2 class="mb-6">Latest Post</h2>
+      <h2 className="mb-6">Latest Post</h2>
       {posts.map(post => {
         const { title, slug, category, image } = post.frontmatter
 
         return (
-          <div class="feature-post">
+          <div className="feature-post">
             <Link to={`/${slug}`} key={post.id}>
               <GatsbyImage
                 image={getImage(image)}
@@ -43,13 +43,13 @@ const Recent = () => {
                 className="feature-post-image"
               ></GatsbyImage>
             </Link>
-            <div class="post-details">
+            <div className="post-details">
               <h2>
                 <Link to={`/${slug}`} key={post.id}>
                   {title}
                 </Link>
               </h2>
-              <div class="tags">
+              <div className="tags">
                 <Link to={`/${category}`}>{category}</Link>
               </div>
             </div>

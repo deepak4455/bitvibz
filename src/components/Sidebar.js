@@ -7,8 +7,8 @@ import image from "../assets/images/1.jpg"
 
 const Sidebar = () => {
   return (
-    <div class="sidebar">
-      <div class="content widget">
+    <div className="sidebar">
+      <div className="content widget">
         <h2>Promotion</h2>
         <img src={image} alt="" />
       </div>

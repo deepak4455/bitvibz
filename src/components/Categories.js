@@ -14,14 +14,14 @@ const Categories = () => {
     allMdx: { distinct },
   } = useStaticQuery(query)
   return (
-    <div class="content widget">
+    <div className="content widget">
       <h2>Categories</h2>
       {distinct.map((category, index) => {
         return (
-          <div class="tag-item" key={index}>
+          <div className="tag-item" key={index}>
             <Link to={`/${category}`} className="category">
               {category}
-              {/* <span class="post-count">(4)</span> */}
+              {/* <span className="post-count">(4)</span> */}
             </Link>
           </div>
         )

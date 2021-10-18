@@ -6,7 +6,7 @@ const Post = ({ frontmatter, excerpt }) => {
   const { title, image, slug, category } = frontmatter
 
   return (
-    <article class="px-6 mb-14">
+    <article className="px-6 mb-14">
       <Link to={`/${slug}`}>
         <GatsbyImage
           image={getImage(image)}
@@ -16,8 +16,8 @@ const Post = ({ frontmatter, excerpt }) => {
         />
       </Link>
 
-      <div class="content">
-        <div class="categories  mb-3">
+      <div className="content">
+        <div className="categories  mb-3">
           <Link to={`/${category}`}>{category}</Link>
         </div>
         <h2 className="mb-3 ">

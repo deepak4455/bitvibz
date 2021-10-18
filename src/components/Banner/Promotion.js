@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Promotion = () => {
   return (
-    <div class="content widget">
+    <div className="content widget">
       <h2>Promotion</h2>
       <StaticImage
         src="../../assets/images/1.jpg"

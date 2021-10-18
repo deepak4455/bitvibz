@@ -14,7 +14,7 @@ const Footer = () => {
   `)
   return (
     <footer className="footer section px-3 py-6">
-      <div class="container">
+      <div className="container">
         <div className="copyright">
           &copy; {new Date().getFullYear()}{" "}
           <span>{data.site.siteMetadata.title}</span> Built with
@@ -22,7 +22,7 @@ const Footer = () => {
             Gatsby
           </a>
         </div>
-        <div class="footer-menu">
+        <div className="footer-menu">
           <Link to="/">Home</Link>
           <Link to="/About">About us</Link>
           <Link to="/">Privacy Policy</Link>

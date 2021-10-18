@@ -54,10 +54,8 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `./src/assets/images/logo.svg`,
+        icon: `./src/assets/images/sample-logo.jpg`,
         icon_options: {
-          // For all the options available,
-          // please see the section "Additional Resources" below.
           purpose: `any maskable`,
         },
         orientation: "portrait",
