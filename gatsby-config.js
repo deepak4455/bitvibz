@@ -48,8 +48,7 @@ module.exports = {
         name: `BitVibz`,
         short_name: `BitVibz`,
         description: `The application does cool things and makes your life better.`,
-        categories: ["blog", "quote"]
-
+        categories: ["blog", "quote"],
         lang: `en`,
         start_url: `/`,
         background_color: `#f7f0eb`,
