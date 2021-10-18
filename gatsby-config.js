@@ -55,6 +55,11 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `./src/assets/images/logo.svg`,
+        icon_options: {
+          // For all the options available,
+          // please see the section "Additional Resources" below.
+          purpose: `any maskable`,
+        },
         orientation: "portrait",
       },
     },
