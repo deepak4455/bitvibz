@@ -47,11 +47,16 @@ module.exports = {
       options: {
         name: `BitVibz`,
         short_name: `BitVibz`,
+        description: `The application does cool things and makes your life better.`,
+        categories: ["blog", "quote"]
+
+        lang: `en`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `./src/assets/images/logo.svg`,
+        orientation: "portrait",
       },
     },
     {
