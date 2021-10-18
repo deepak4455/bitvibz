@@ -9,6 +9,7 @@ import {
   BsXLg,
 } from "react-icons/bs"
 import { StaticImage } from "gatsby-plugin-image"
+import "../assets/css/header.scss"
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -35,12 +36,6 @@ const Navbar = () => {
             </Link>
             <Link to="/Contact" activeClassName="active-link">
               Contact
-            </Link>
-            <Link to="/404" activeClassName="active-link">
-              404
-            </Link>
-            <Link to="/" activeClassName="active-link">
-              Recipes
             </Link>
           </div>
           <div className="dark-mode">
@@ -106,13 +101,6 @@ const Navbar = () => {
               activeClassName="d-active-link"
             >
               Contact
-            </Link>
-            <Link
-              onClick={() => setShow(!show)}
-              to="/404"
-              activeClassName="d-active-link"
-            >
-              404
             </Link>
           </div>
           <div class="drawer-social-links">

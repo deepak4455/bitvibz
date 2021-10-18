@@ -6,14 +6,14 @@ import Posts from "../components/Posts"
 
 export const query = graphql`
   {
-    allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 3) {
+    allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 10) {
       nodes {
         excerpt(pruneLength: 175)
         frontmatter {
           title
           image {
             childImageSharp {
-              gatsbyImageData(breakpoints: [640, 768, 1024, 1280], quality: 30)
+              gatsbyImageData(quality: 40, width: 592)
             }
           }
           category

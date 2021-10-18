@@ -6,7 +6,7 @@ const Posts = ({ posts, title }) => {
   return (
     <div class="container blog-layout pt-16 ">
       <div class="articles">
-        <h3 className="page-title text-2xl mb-12 ml-4">{title}</h3>
+        <h3 className="page-title text-2xl mb-12 px-6">{title}</h3>
         <div class="article-container">
           {posts.map(post => {
             return <Post key={post.id} {...post} />

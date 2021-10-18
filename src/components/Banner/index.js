@@ -5,9 +5,7 @@ import Promotion from "./Promotion"
 const Banner = () => {
   return (
     <div className="sidebar">
-      {/* <About /> */}
-      {/* <BannerCategories />  */}
-      <Promotion />
+      {/* <Promotion /> */}
       <Recent />
       <BannerCategories />
     </div>
