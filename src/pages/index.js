@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/Layout"
-
 import { graphql } from "gatsby"
 import Posts from "../components/Posts"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -30,6 +30,7 @@ const index = ({ data }) => {
   } = data
   return (
     <Layout>
+      <SEO title="Home" />
       <Posts posts={posts} title={`Recent Posts`} />
     </Layout>
   )

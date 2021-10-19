@@ -6,11 +6,15 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: "/bitvibz",
+  // pathPrefix: "/bitvibz",
 
   siteMetadata: {
-    title: "Bitvibz",
-    description: "Motivational and success quotes",
+    title: `Bitvibzs`,
+    description: `Motivational and success quotes`,
+    titleTemplate: `%s | Bitvibz`,
+    url: `https://bitvibz.netlify.app/`,
+    image: `static/main.jpg`,
+    twitterUsername: `@bitvibz`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -41,31 +45,33 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
-    "gatsby-plugin-postcss",
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `BitVibz`,
-        short_name: `BitVibz`,
-        description: `The application does cool things and makes your life better.`,
-        categories: ["blog", "quote"],
-        lang: `en`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`,
-        icon: `./src/assets/images/sample-logo.jpg`,
-        icon_options: {
-          purpose: `any maskable`,
-        },
-        orientation: "portrait",
-      },
-    },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/about/`],
-      },
-    },
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Bitvibz`,
+    //     short_name: `Bitvibz`,
+    //     // start_url: `/`,
+    //     scope: `/`,
+    //     background_color: `#f7f0eb`,
+    //     description: `The application does cool things and makes your life better.`,
+    //     categories: [`blog`, `quotes`],
+    //     theme_color: `#a2466c`,
+    //     display: `standalone`,
+    //     // prefer_related_applications: `true`,
+    //     icon: `src/assets/images/sample-logo.png`,
+    //     // cache_busting_mode: `none`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-offline`,
+    //   options: {
+    //     precachePages: [`/about/`],
+    //     // workboxConfig: {
+    //     //   globPatterns: ["**/icon-path*"],
+    //     // },
+    //   },
+    // },
   ],
 }
