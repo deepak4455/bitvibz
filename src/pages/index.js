@@ -18,6 +18,7 @@ export const query = graphql`
           }
           category
           slug
+          description
         }
         id
       }
@@ -31,7 +32,7 @@ const index = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Posts posts={posts} title={`Recent Posts`} />
+      <Posts posts={posts} title="Recent Posts" />
     </Layout>
   )
 }

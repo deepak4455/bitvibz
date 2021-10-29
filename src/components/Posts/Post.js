@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 const Post = ({ frontmatter, excerpt }) => {
-  const { title, image, slug, category } = frontmatter
+  const { title, description, image, slug, category } = frontmatter
 
   return (
     <article className="px-6 mb-14">
@@ -23,7 +23,7 @@ const Post = ({ frontmatter, excerpt }) => {
         <h2 className="mb-3 ">
           <Link to={`/${slug}`}>{title}</Link>
         </h2>
-        <p>{excerpt}</p>
+        <p>{description}</p>
       </div>
     </article>
   )

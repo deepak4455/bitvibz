@@ -13,7 +13,6 @@ export const query = graphql`
         title
         category
         date(formatString: "MMMM Do, YYYY")
-        readTime
         slug
         embeddedImages {
           childImageSharp {
@@ -25,6 +24,7 @@ export const query = graphql`
             gatsbyImageData
           }
         }
+        description
       }
       body
     }
@@ -34,14 +34,20 @@ export const query = graphql`
 const PostTemplate = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, image, date, embeddedImages },
+      frontmatter: { title, image, date, description, embeddedImages },
       body,
     },
   } = data
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO
+        title={title}
+        image={image.childImageSharp.gatsbyImageData.images.fallback.src.substring(
+          1
+        )}
+        description={description}
+      />
       <div className="container blog-layout pt-16 ">
         <div className="articles px-6 pb-16">
           <div className="main-content">

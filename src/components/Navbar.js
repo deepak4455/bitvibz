@@ -68,16 +68,24 @@ const Navbar = () => {
         </div>
       </div>
       <div className={show ? "drawer drawer-is-active" : "drawer"}>
-        <div className="drawer-overlay" onClick={() => setShow(!show)}></div>
-        <div className="drawer-content">
+        <div
+          className="drawer-overlay"
+          onClick={() => setShow(!show)}
+          style={show ? { opacity: "1" } : {}}
+        ></div>
+        <div
+          className="drawer-content"
+          style={show ? {} : { transform: "translateX(-100%)", width: "300px" }}
+        >
           <div className="drawer-head p-5">
             <div className="drawer-logo">
               <StaticImage src="../assets/images/logo.svg" alt="website logo" />
             </div>
-
-            <button onClick={() => setShow(!show)}>
-              <BsXLg id="close" />
-            </button>
+            <div>
+              <button onClick={() => setShow(!show)}>
+                <BsXLg id="close" />
+              </button>
+            </div>
           </div>
           <div className="drawer-menu">
             <Link

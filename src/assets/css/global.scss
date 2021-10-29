@@ -1,13 +1,8 @@
-// @import "./colors.scss";
+@import "./colors.scss";
 /* Variable */
-$background: #ffffff;
-$primary: #e6003a;
-$text-color: #404040;
-$text-color-light: #737373;
-$border-color: #d9d9d9;
 
 // Order
-$border-radius: 0.25em;
+// $border-radius: 0.25em;
 * {
   box-sizing: border-box;
   transition: all 0.25s ease 0s;
