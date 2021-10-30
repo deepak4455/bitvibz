@@ -9,13 +9,22 @@ const Contact = () => {
       <SEO title="Contact" description="Feel free to contact us." />
       <div className="container contact pt-16 px-6 pb-14">
         <h1 class="pb-12">Contact</h1>
-        <form name="contact" method="POST" data-netlify="true">
-          <p>
+
+        <form
+          method="post"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          name="contact"
+          id="form"
+        >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
+          <p id="name">
             <label>
               Your Name: <input type="text" name="name" />
             </label>
           </p>
-          <p>
+          <p id="email">
             <label>
               Your Email: <input type="email" name="email" />
             </label>

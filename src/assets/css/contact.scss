@@ -30,3 +30,17 @@
     border: 0px;
   }
 }
+@media screen and (min-width: 767px) {
+  #form #name,
+  #form #email {
+    display: inline-block;
+    max-width: calc(50% - 1em);
+  }
+
+  #form #name {
+    margin-right: 1em;
+  }
+  #form #email {
+    margin-left: 1em;
+  }
+}
