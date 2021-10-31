@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { Helmet } from "react-helmet"
 import {
   BsFacebook,
   BsInstagram,
@@ -11,6 +12,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Drawer = ({ setShow, show }) => {
   return (
     <>
+      <Helmet bodyAttributes={show ? { class: "body-over-h" } : {}} />
       <div className={show ? "drawer drawer-is-active" : "drawer"}>
         <div
           className="overlay"
