@@ -26,7 +26,11 @@ const Drawer = ({ setShow, show }) => {
           }
         >
           <div className="d-branding py-4">
-            <StaticImage src="../assets/images/logo.svg" alt="website logo" />
+            <StaticImage
+              className="d-branding-img"
+              src="../assets/images/logo.svg"
+              alt="website logo"
+            />
           </div>
           <div className="d-menu">
             <Link

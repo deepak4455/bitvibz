@@ -171,9 +171,9 @@ header {
   padding-left: 16px;
   padding-right: 16px;
   box-shadow: $box-shadow;
-  img {
-    width: 100px;
-  }
+}
+.d-branding-img {
+  max-width: 100px;
 }
 .d-menu {
   margin-top: 3em;
