@@ -1,28 +1,29 @@
 import { Link } from "gatsby"
 import React from "react"
 import {
-  BsMoonFill,
   BsFacebook,
   BsInstagram,
   BsPinterest,
-  BsFilterLeft,
+  BsFilterRight,
+  BsChevronDown,
+  BsX,
 } from "react-icons/bs"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = ({ setShow, show }) => {
   return (
     <>
-      <div className="py-4 px-3 header-section">
-        <div className="container header-container">
-          <div className="mobile-menu">
-            <button aria-hidden="true" onClick={() => setShow(!show)}>
-              <BsFilterLeft id="menu-bar" />
-            </button>
-          </div>
+      <header>
+        <div className="container header-container px-4 py-4">
           <div className="branding">
             <Link to="/">
               <StaticImage src="../assets/images/logo.svg" alt="website logo" />
             </Link>
+          </div>
+          <div className="nav-icon">
+            <button aria-hidden="true" onClick={() => setShow(!show)}>
+              {show ? <BsX /> : <BsFilterRight />}
+            </button>
           </div>
           <div className="nav-menu">
             <Link to="/" activeClassName="active-link">
@@ -34,13 +35,28 @@ const Navbar = ({ setShow, show }) => {
             <Link to="/Contact" activeClassName="active-link">
               Contact
             </Link>
+            <div className="dropdown">
+              <button>
+                <span>Motivation</span>
+                <BsChevronDown />
+              </button>
+              <div className="dropdown-content">
+                <Link to="/" activeClassName="active-link">
+                  Life
+                </Link>
+                <Link to="/" activeClassName="active-link">
+                  Success
+                </Link>
+                <Link to="/" activeClassName="active-link">
+                  Failure
+                </Link>
+              </div>
+            </div>
+            <Link to="/" activeClassName="active-link">
+              Birthday
+            </Link>
           </div>
-          <div className="dark-mode">
-            <button aria-label="enable dark mode">
-              <BsMoonFill id="moon" />
-            </button>
-          </div>
-          <div className="social-links">
+          <div className="social-share">
             <a
               href="https://www.facebook.com/"
               rel="noreferrer"
@@ -64,7 +80,7 @@ const Navbar = ({ setShow, show }) => {
             </a>
           </div>
         </div>
-      </div>
+      </header>
     </>
   )
 }

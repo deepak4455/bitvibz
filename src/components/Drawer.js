@@ -1,6 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
-import { BsFacebook, BsInstagram, BsPinterest, BsXLg } from "react-icons/bs"
+import {
+  BsFacebook,
+  BsInstagram,
+  BsPinterest,
+  BsChevronDown,
+} from "react-icons/bs"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Drawer = ({ setShow, show }) => {
@@ -8,25 +13,22 @@ const Drawer = ({ setShow, show }) => {
     <>
       <div className={show ? "drawer drawer-is-active" : "drawer"}>
         <div
-          className="drawer-overlay"
+          className="overlay"
           onClick={() => setShow(!show)}
           style={show ? { opacity: "1" } : {}}
         ></div>
         <div
           className="drawer-content"
-          style={show ? {} : { transform: "translateX(-100%)", width: "300px" }}
+          style={
+            show
+              ? { width: "300px" }
+              : { transform: "translateX(-100%)", width: "300px" }
+          }
         >
-          <div className="drawer-head p-5">
-            <div className="drawer-logo">
-              <StaticImage src="../assets/images/logo.svg" alt="website logo" />
-            </div>
-            <div>
-              <button onClick={() => setShow(!show)}>
-                <BsXLg id="close" />
-              </button>
-            </div>
+          <div className="d-branding py-4">
+            <StaticImage src="../assets/images/logo.svg" alt="website logo" />
           </div>
-          <div className="drawer-menu">
+          <div className="d-menu">
             <Link
               onClick={() => setShow(!show)}
               to="/"
@@ -48,35 +50,69 @@ const Drawer = ({ setShow, show }) => {
             >
               Contact
             </Link>
-          </div>
-          <div className="drawer-social-links">
-            <h4>Follow us</h4>
-            <div className="social-icons">
-              <a
-                onClick={() => setShow(!show)}
-                href="https://www.facebook.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <BsFacebook id="facebook" />
-              </a>
-              <a
-                onClick={() => setShow(!show)}
-                href="https://www.instagram.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <BsInstagram id="instagram" />
-              </a>
-              <a
-                onClick={() => setShow(!show)}
-                href="https://www.pinterest.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <BsPinterest id="pinterest" />
-              </a>
+            <div className="d-dropdown">
+              <button>
+                <span>Motivation</span>
+                <BsChevronDown />
+              </button>
+              <div className="d-dropdown-content">
+                <Link
+                  onClick={() => setShow(!show)}
+                  to="/"
+                  activeClassName="d-active-link"
+                >
+                  Life
+                </Link>
+                <Link
+                  onClick={() => setShow(!show)}
+                  to="/"
+                  activeClassName="d-active-link"
+                >
+                  Success
+                </Link>
+                <Link
+                  onClick={() => setShow(!show)}
+                  to="/"
+                  activeClassName="d-active-link"
+                >
+                  Failure
+                </Link>
+              </div>
             </div>
+            <Link
+              onClick={() => setShow(!show)}
+              to="/"
+              activeClassName="d-active-link"
+            >
+              Birthday
+            </Link>
+          </div>
+          <div className="d-social-share">
+            <h2>Follow us</h2>
+            <a
+              onClick={() => setShow(!show)}
+              href="https://www.facebook.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <BsFacebook id="facebook" />
+            </a>
+            <a
+              onClick={() => setShow(!show)}
+              href="https://www.instagram.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <BsInstagram id="instagram" />
+            </a>
+            <a
+              onClick={() => setShow(!show)}
+              href="https://www.pinterest.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <BsPinterest id="pinterest" />
+            </a>
           </div>
         </div>
       </div>
