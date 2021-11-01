@@ -1,5 +1,5 @@
 @media (min-width: 1280px) {
-  .container {
+  .blog-layout {
     max-width: 1200px;
   }
 }
@@ -234,4 +234,12 @@ article p {
   background-color: #292929;
   color: #ffffff;
   padding: 1em 2em;
+}
+
+/* all paragraph center in post-description */
+.post-description {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
 }

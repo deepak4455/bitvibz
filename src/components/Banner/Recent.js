@@ -32,7 +32,7 @@ const Recent = () => {
     <div className="widget">
       <h2 className="mb-6">Latest Post</h2>
       {posts.map(post => {
-        const { title, slug, category, image } = post.frontmatter
+        const { title, slug, image } = post.frontmatter
 
         return (
           <div className="feature-post">
@@ -49,9 +49,9 @@ const Recent = () => {
                   {title}
                 </Link>
               </h2>
-              <div className="tags">
+              {/* <div className="tags">
                 <Link to={`/${category}`}>{category}</Link>
-              </div>
+              </div> */}
             </div>
           </div>
         )

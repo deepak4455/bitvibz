@@ -12,16 +12,16 @@ export const query = graphql`
       frontmatter {
         title
         category
-        date(formatString: "MMMM Do, YYYY")
+        date(formatString: "Do MMMM, YYYY")
         slug
         embeddedImages {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(width: 736)
           }
         }
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(width: 736)
           }
         }
         description

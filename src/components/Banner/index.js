@@ -6,8 +6,8 @@ const Banner = () => {
   return (
     <div className="sidebar">
       {/* <Promotion /> */}
-      <Recent />
       <BannerCategories />
+      <Recent />
     </div>
   )
 }

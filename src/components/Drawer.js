@@ -23,8 +23,12 @@ const Drawer = ({ setShow, show }) => {
           className="drawer-content"
           style={
             show
-              ? { width: "300px" }
-              : { transform: "translateX(-100%)", width: "300px" }
+              ? { width: "280px" }
+              : {
+                  transform: "translateX(-100%)",
+                  width: "280px",
+                  marginRight: "20px",
+                }
           }
         >
           <div className="d-branding py-4">

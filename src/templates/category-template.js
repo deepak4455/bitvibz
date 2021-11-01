@@ -31,9 +31,9 @@ export const query = graphql`
         excerpt
         frontmatter {
           title
-          author
+
           category
-          date(formatString: "MMMM, Do YYYY")
+          date(formatString: "Do MMMM, YYYY")
           slug
           image {
             childImageSharp {
