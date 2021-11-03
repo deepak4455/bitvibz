@@ -25,8 +25,8 @@ const Footer = () => {
         <div className="footer-menu">
           <Link to="/">Home</Link>
           <Link to="/About">About us</Link>
-          <Link to="/">Privacy Policy</Link>
           <Link to="/Contact">Contact</Link>
+          <Link to="/privacy-policy">Privacy Policy</Link>
         </div>
       </div>
     </footer>

@@ -9,7 +9,7 @@ module.exports = {
   // pathPrefix: "/bitvibz",
 
   siteMetadata: {
-    title: `Bitvibzs`,
+    title: `Bitvibz`,
     description: `Motivational and success quotes`,
     titleTemplate: `%s | Bitvibz`,
     url: `https://bitvibz.netlify.app/`,

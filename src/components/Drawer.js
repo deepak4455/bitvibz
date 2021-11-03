@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import {
   BsFacebook,
@@ -7,9 +8,17 @@ import {
   BsPinterest,
   BsChevronDown,
 } from "react-icons/bs"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Drawer = ({ setShow, show }) => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <>
       <Helmet bodyAttributes={show ? { class: "body-over-h" } : {}} />
@@ -32,11 +41,12 @@ const Drawer = ({ setShow, show }) => {
           }
         >
           <div className="d-branding py-4">
-            <StaticImage
+            {/* <StaticImage
               className="d-branding-img"
               src="../assets/images/logo.svg"
               alt="website logo"
-            />
+            /> */}
+            <p class="logo">{data.site.siteMetadata.title}</p>
           </div>
           <div className="d-menu">
             <Link
@@ -46,34 +56,21 @@ const Drawer = ({ setShow, show }) => {
             >
               Home
             </Link>
-            <Link
-              onClick={() => setShow(!show)}
-              to="/About"
-              activeClassName="d-active-link"
-            >
-              About
-            </Link>
-            <Link
-              onClick={() => setShow(!show)}
-              to="/Contact"
-              activeClassName="d-active-link"
-            >
-              Contact
-            </Link>
+
             <div className="d-dropdown">
               <button>
-                <span>Motivation</span>
+                <span>Good Morning</span>
                 <BsChevronDown />
               </button>
               <div className="d-dropdown-content">
                 <Link
                   onClick={() => setShow(!show)}
-                  to="/"
+                  to="/shubh-prabhat-suvichar"
                   activeClassName="d-active-link"
                 >
-                  Life
+                  शुभ प्रभात
                 </Link>
-                <Link
+                {/* <Link
                   onClick={() => setShow(!show)}
                   to="/"
                   activeClassName="d-active-link"
@@ -86,16 +83,30 @@ const Drawer = ({ setShow, show }) => {
                   activeClassName="d-active-link"
                 >
                   Failure
-                </Link>
+                </Link> */}
               </div>
             </div>
             <Link
+              onClick={() => setShow(!show)}
+              to="/about"
+              activeClassName="d-active-link"
+            >
+              About
+            </Link>
+            <Link
+              onClick={() => setShow(!show)}
+              to="/contact"
+              activeClassName="d-active-link"
+            >
+              Contact
+            </Link>
+            {/* <Link
               onClick={() => setShow(!show)}
               to="/"
               activeClassName="d-active-link"
             >
               Birthday
-            </Link>
+            </Link> */}
           </div>
           <div className="d-social-share">
             <h2>Follow us</h2>

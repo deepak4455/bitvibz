@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <Layout>
       <SEO title="Contact" description="Feel free to contact us." />
-      <div className="container contact pt-16 px-6 pb-14">
+      <div className="container container-max contact pt-16 px-6 pb-14">
         <h1 class="pb-12">Contact</h1>
 
         <form

@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import {
   BsFacebook,
   BsInstagram,
@@ -8,16 +9,25 @@ import {
   BsChevronDown,
   BsX,
 } from "react-icons/bs"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = ({ setShow, show }) => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <>
       <header>
         <div className="container header-container px-4 py-4">
           <div className="branding">
             <Link to="/">
-              <StaticImage src="../assets/images/logo.svg" alt="website logo" />
+              {/* <StaticImage src="../assets/images/logo.svg" alt="website logo" /> */}
+              <p class="logo">{data.site.siteMetadata.title}</p>
             </Link>
           </div>
           <div className="nav-icon">
@@ -29,31 +39,35 @@ const Navbar = ({ setShow, show }) => {
             <Link to="/" activeClassName="active-link">
               Home
             </Link>
-            <Link to="/About" activeClassName="active-link">
-              About
-            </Link>
-            <Link to="/Contact" activeClassName="active-link">
-              Contact
-            </Link>
+
             <div className="dropdown">
               <button>
-                <span>Motivation</span>
+                <span>Good Morning</span>
                 <BsChevronDown />
               </button>
               <div className="dropdown-content">
-                <Link to="/" activeClassName="active-link">
-                  Life
+                <Link
+                  to="/shubh-prabhat-suvichar"
+                  activeClassName="active-link"
+                >
+                  शुभ प्रभात
                 </Link>
-                <Link to="/" activeClassName="active-link">
+                {/*<Link to="/" activeClassName="active-link">
                   Success
                 </Link>
                 <Link to="/" activeClassName="active-link">
                   Failure
-                </Link>
+                </Link> */}
               </div>
             </div>
-            <Link to="/" activeClassName="active-link">
+            {/* <Link to="/" activeClassName="active-link">
               Birthday
+            </Link> */}
+            <Link to="/about" activeClassName="active-link">
+              About
+            </Link>
+            <Link to="/contact" activeClassName="active-link">
+              Contact
             </Link>
           </div>
           <div className="social-share">
