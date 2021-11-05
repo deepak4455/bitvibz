@@ -57,6 +57,17 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-T0P658R60X",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // defaults to false
+        enableWebVitalsTracking: true,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
