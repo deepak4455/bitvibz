@@ -13,6 +13,7 @@ module.exports = {
     description: `Motivational and success quotes`,
     titleTemplate: `%s | Bitvibz`,
     url: `https://bitvibz.netlify.app/`,
+    siteUrl: `https://bitvibz.netlify.app/`,
     image: `static/main.jpg`,
     twitterUsername: `@bitvibz`,
   },
@@ -84,6 +85,15 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://bitvibz.netlify.app/",
+        sitemap: "https://bitvibz.netlify.app/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
