@@ -5,7 +5,10 @@ import SEO from "../components/SEO"
 const Privacypolicy = () => {
   return (
     <Layout>
-      <SEO title="Privacy Policy" />
+      <SEO
+        title="Privacy Policy"
+        description="This Privacy Policy document contains types of information that is collected and recorded by BitVibz and how we use it."
+      />
       <div className="container container-max pt-16 px-6 pb-14">
         <h1 class="pb-12">Privacy Policy for Bit Vibz</h1>
 
