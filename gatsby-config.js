@@ -89,6 +89,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
+        host: "https://bitvibz.netlify.app/",
         sitemap: "https://bitvibz.netlify.app/sitemap/sitemap-index.xml",
         sitemap: "https://bitvibz.netlify.app/sitemap/sitemap-0.xml",
         policy: [{ userAgent: "*", allow: "/" }],
