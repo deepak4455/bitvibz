@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  // pathPrefix: "/bitvibz",
+  pathPrefix: "/bitvibz",
 
   siteMetadata: {
     title: `Bitvibz`,
@@ -85,13 +85,13 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
+    // `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://bitvibz.netlify.app/",
-        sitemap: "https://bitvibz.netlify.app/sitemap/sitemap-index.xml",
-        sitemap: "https://bitvibz.netlify.app/sitemap/sitemap-0.xml",
+        sitemap: "https://bitvibz.netlify.app/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
