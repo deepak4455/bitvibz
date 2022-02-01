@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://bitvibz.netlify.app/sitemap.xml
-Host: https://bitvibz.netlify.app
+Sitemap: https://deepak4455.github.io/bitvibz/sitemap.xml
+Host: https://deepak4455.github.io
